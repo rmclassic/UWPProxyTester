@@ -10,13 +10,19 @@
 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="IPTextBox" TextWrapping="Wrap" Text="" Height="29" Margin="10,35,0,0" PlaceholderText="IP" HorizontalAlignment="Left" Width="171" VerticalAlignment="Top"/>
-        <TextBox x:Name="PortTextBox" TextWrapping="Wrap" Text="" Height="29" Margin="10,72,0,0" PlaceholderText="Port" HorizontalAlignment="Left" Width="171" VerticalAlignment="Top"/>
-        <Button x:Name="AddButton" Content="Add Proxy" HorizontalAlignment="Right" Margin="0,35,10,0" VerticalAlignment="Top" Click="AddButton_Click" Width="164" Height="32"/>
-        <Button x:Name="TestButton" Content="Test Proxies" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,72,10,0" Width="164" Height="32" Click="TestButton_Click"/>
-        <ListView x:Name="ProxyListView" Margin="10,0,10,10" Height="446" VerticalAlignment="Bottom" Background="#FFBDBDBD"/>
-        <Button x:Name="PasteButton_Copy" Content="Paste Proxy List" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,109,10,0" Width="164" Height="32" Click="PasteButton_Copy_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="6,141,-11,0" TextWrapping="Wrap" Text="To Paste a Proxy List, please visit sslproxies.org, and make sure you copy them starting with an IP." VerticalAlignment="Top" Width="365"/>
+
+        <TextBox x:Name="IPTextBox" TextWrapping="Wrap" Text="" Height="32" Margin="10,23,179,0" PlaceholderText="IP" VerticalAlignment="Top"/>
+        <TextBox x:Name="PortTextBox" TextWrapping="Wrap" Text="" Height="32" Margin="10,69,179,0" PlaceholderText="Port" VerticalAlignment="Top"/>
+        <Button x:Name="AddButton" Content="Add Proxy" HorizontalAlignment="Right" Margin="0,122,7,0" VerticalAlignment="Top" Click="AddButton_Click" Width="164" Height="49"/>
+        <Button x:Name="TestButton" Content="Test Proxies" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,9,7,0" Width="164" Height="49" Click="TestButton_Click"/>
+        <Button x:Name="PasteButton_Copy" Content="Paste Proxy List" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,65,7,0" Width="164" Height="49" Click="PasteButton_Copy_Click"/>
+
+        <ScrollViewer Margin="-1,233,1,0" Background="WhiteSmoke">
+            <StackPanel Name="rel" />
+        </ScrollViewer>
+        <Button x:Name="Download_List" Content="Download Proxy List" HorizontalAlignment="Right" Margin="0,179,7,0" VerticalAlignment="Top" Click="Button_Click_1" Width="164" Height="49"/>
+        <ProgressRing x:Name="DownloadProgressRing" HorizontalAlignment="Right" Margin="0,179,179,0" VerticalAlignment="Top" Height="49" Width="50"/>
+
 
     </Grid>
 
